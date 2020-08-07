@@ -13,6 +13,7 @@
 
 * Github repository : https://github.com/RMIT-SEPT/majorproject-1-fri-10-30-6
 * ClickUp Workspace : https://app.clickup.com/xxxx/yyyy
+* Trello Board:https://trello.com/invite/b/TnFq7qLO/55acbd33e9d0f66fdd3b5224dcb6f7f8/sepi-group-6
 
 
 ## Code documentation
