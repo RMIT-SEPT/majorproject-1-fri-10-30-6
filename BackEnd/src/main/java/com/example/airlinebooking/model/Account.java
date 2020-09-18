@@ -7,6 +7,7 @@ import java.util.Date;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
     private String username;
     private String password;
@@ -15,6 +16,7 @@ public class Account {
     private String email;
     private String gender;
     private String country;
+
     private String address;
     private String phoneNum;
 
