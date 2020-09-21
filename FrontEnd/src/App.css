@@ -1,0 +1,348 @@
+/* HomePage CSS*/
+
+.pagebreak {
+    background-color: lightgray;
+    height: 40px;
+ 
+}
+
+.pagebreaktwo {
+   
+    height: 55px;
+}
+
+.searchborder {
+    background-image: url("./images/cinque-terre-828614_1920.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    padding-left: 230px;
+    padding-right: 230px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.innerBox {
+  
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+.searchTitle {
+    color:white;
+    font-size: 30px;
+}
+
+.searchBox {
+    border-radius: 10px;
+    background: rgba(40, 43, 45, 0.7);
+    color: white;
+}
+
+.recomFlights {
+    width: 100%;
+    padding-bottom: 1em;
+    text-align: center;
+    padding-top:20px;
+}
+
+.about-border {
+    display: block;
+    width: 800px;
+    height: 3px;
+    background-color:darkslategrey;
+    margin: 20px auto;
+}
+
+.faq-border {
+    display: block;
+    width: 1200px;
+    height: 3px;
+    background-color: darkslategrey;
+    margin: 20px auto;
+}
+
+.faqtext {
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 20px;
+}
+
+.box {
+    background: #fff;
+    border-radius: 20px;
+    padding-bottom: 100%;
+    max-height: 100px;
+    color: azure;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.9);
+}
+
+.col-lg-2, .col-md-3, .col-xs-6, .topmar {
+    margin-top: 30px !important;
+}
+
+.boxtop {
+    
+    padding-bottom: 75%;
+}
+
+.boxbottom {
+    color: #080807;
+    background-color: #cfcfc8;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 1%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.canberra {
+    background-image: url("./images/canberra.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.melbourne {
+    background-image: url("./images/melbourne.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hobart {
+    background-image: url("./images/hobart.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sydney {
+    background-image: url("./images/sydney.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.topmar {
+    
+}
+
+
+/* Navbar CSS*/
+.navFeature {
+    background-color: #999999;
+    height: 2px;
+}
+
+/* Footer CSS*/
+
+.footercss {
+    background-color: #ebebeb;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.footerFeature {
+    background-color: #999999;
+    height: 4px;
+}
+
+/* unvisited link */
+a:link {
+    color: #474646;
+}
+
+/* visited link */
+a:visited {
+    color: #474646;
+}
+
+/* mouse over link */
+a:hover {
+    color: #474646;
+}
+
+/* selected link */
+a:active {
+    color: #474646;
+}
+
+/* Register Modal CSS*/
+
+.modalcloseRegi {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/exitbutton.png");
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+
+
+    .modalcloseRegi:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+#bookingRegi {
+    font-family: 'Cabin', sans-serif;
+    background-color: #d9dcde;
+}
+
+.contpad {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.booking-form-Regi {
+    background-color: #ffffff !important;
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.9);
+}
+
+    .booking-form-Regi > .imageRegi {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 250px;
+        background-image: url('./images/beach.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .booking-form-Regi > form {
+        margin-left: 250px;
+        padding: 30px;
+        border: 1px solid #f9fafc;
+        border-left: 0px;
+    }
+
+    .booking-form-Regi .form-headerRegi {
+        margin-bottom: 30px;
+    }
+
+    .booking-form-Regi .form-headerRegi  {
+        margin: 0;
+        margin-bottom: 0px;
+        font-weight: 700;
+        color: #122244;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+
+   
+ 
+
+    .booking-form-Regi .submit-btn {
+        color: #fff;
+        background-color: #6499ff;
+        font-weight: 700;
+        padding: 13px 35px;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+    }
+
+
+
+
+/* Login Modal CSS*/
+
+.modalcloseLog {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/exitbutton.png");
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+
+
+    .modalcloseLog:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+#bookingLog {
+    font-family: 'Cabin', sans-serif;
+    background-color: #d9dcde;
+}
+
+.booking-form-Log {
+    background-color: #ffffff !important;
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.9);
+}
+
+    .booking-form-Log > .imageLog {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 250px;
+        background-image: url('./images/books.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .booking-form-Log > form {
+        margin-right: 250px;
+        padding: 30px;
+        border: 1px solid #f9fafc;
+        border-left: 0px;
+    }
+
+    .booking-form-Log .form-headerLog {
+        margin-bottom: 30px;
+    }
+
+    .booking-form-Log .form-headerLog {
+        margin: 0;
+        margin-bottom: 0px;
+        font-weight: 700;
+        color: #122244;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+
+
+
+
+    .booking-form-Log .submit-btn {
+        color: #fff;
+        background-color: #6499ff;
+        font-weight: 700;
+        padding: 13px 35px;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+    }
+
+
