@@ -17,10 +17,20 @@ public class accountController {
 
 
     @PostMapping("")
-    public ResponseEntity<Account> createNewAccount(@RequestBody Account account){
+    public ResponseEntity<?> createNewAccount(@RequestBody Account account){
         Account account1 = accountService.saveAccount(account);
 
-        return new ResponseEntity<Account>(account, HttpStatus.CREATED);
+        return new ResponseEntity<Account>(account1, HttpStatus.CREATED);
+    }
+
+
+    @GetMapping("{username}")
+    public ResponseEntity<?> getAccountbyId (@PathVariable String username){
+
+        Account account1 = accountService.findByUsername(username);
+        
+        return new ResponseEntity<Account>(account1, HttpStatus.FOUND);
+
     }
 
 }

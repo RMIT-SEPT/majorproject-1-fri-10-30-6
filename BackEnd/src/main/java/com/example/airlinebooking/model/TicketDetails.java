@@ -14,19 +14,30 @@ public class TicketDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private String ticketID;
     private String PassportNumber;
     private String fullName;
     private String flightID;
     private String departureDate;
     private String status;
 
-    public TicketDetails(long id, String passportNumber, String fullName, String flightID, String departureDate, String status) {
+    public TicketDetails(long id, String ticketID, String passportNumber, String fullName, String flightID, String departureDate, String status) {
         this.id = id;
+        this.ticketID = ticketID;
         this.PassportNumber = passportNumber;
         this.fullName = fullName;
         this.flightID = flightID;
         this.departureDate = departureDate;
         this.status = status;
+    }
+
+    public String getTicketID(){
+        return this.ticketID;
+    }
+
+
+    public void setTicketID(String ticketID){
+        this.ticketID = ticketID;
     }
 
     public String getPassportNumber() {
