@@ -25,6 +25,27 @@
 * Communication Done via Microsoft Teams, via a team and a group chat, lab teacher is added to team. 
 * Unit Tests in backend tests folder.
 
+
+Upcoming Plans:
+	
+* CircleCI deploy to AWS Intergration register/login
+*	MVC completed 
+*	Unit tests/ for Reactand SpringBoot
+* Display	Booking history on Front End
+* Intergration Booking to Front End
+
+
+
+ 
+
+ New User stories 
+
+#18 As a user, I would like to pay for the flight ticket on card
+#19 As  an admin, I would like the data store in cloud in case it get lost
+#20 As a user, I would like to book flights as well as calculating luggage price
+#21 As an employee, I would like to own an employee account to manage stuff
+#22 As an employee,  I would like to accept/delete/cancel/return payment 
+
 ## Code documentation
 
 [Quick Start](/docs/README.md) in `docs` folder
