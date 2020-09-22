@@ -22,7 +22,7 @@
 * Github Database/Back-End: https://github.com/RMIT-SEPT/majorproject-1-fri-10-30-6/tree/database
 
 * Sprint Planning is in respetive Google Drive Folders 
-* Communication Done vai Microsoft Teams, via a team and a group chat, lab teacher is added to team. 
+* Communication Done via Microsoft Teams, via a team and a group chat, lab teacher is added to team. 
 
 ## Code documentation
 
