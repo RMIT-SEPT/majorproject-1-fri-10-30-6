@@ -1,0 +1,15 @@
+package Employee;
+
+
+public class Employee extends Account {
+    private long id;
+    private String username;
+
+
+    public Account(long id, String username, String password, String firstname, String lastname, String email, String gender, String country, String address, String phoneNum) {
+        this.id = "E" + id;
+        this.username = "E" + username;
+        super(password, firstname, lastname, email, gender, country, address, phoneNum);
+
+    }
+}
