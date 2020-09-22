@@ -1,0 +1,21 @@
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.example.airlinebooking.model.Account;
+import com.example.airlinebooking.repositories.AccountRepository;
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class AccountServiceTest(){
+
+@Autowired
+private AccountService accoutService;
+private AccountRepository accountrepository;
+
+@Test
+public void saveORupdateAccount(Account account){
+        Account accout=accountrepository.getAccount();
+        assertThat(account,is(account))
+
+        }
+        }
