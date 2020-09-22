@@ -7,7 +7,6 @@ import java.util.Date;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private long id;
     private String username;
     private String password;
@@ -24,6 +23,17 @@ public class Account {
     private Date updatedAt;
 
 
+    public Account(String username, String password, String firstname, String lastname, String email, String gender, String country, String address, String phoneNum){
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.gender = gender;
+        this.country = country;
+        this.address = address;
+        this.phoneNum = phoneNum;
+    }
 
     public Account() {
 

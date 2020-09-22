@@ -2,19 +2,15 @@ package com.example.airlinebooking.web;
 
 
 import com.example.airlinebooking.exceptions.AccountException;
-import com.example.airlinebooking.model.Flight;
 import com.example.airlinebooking.model.FlightDetails;
 import com.example.airlinebooking.model.TicketDetails;
 import com.example.airlinebooking.services.FlightDetailsService;
-import com.example.airlinebooking.services.FlightService;
 import com.example.airlinebooking.services.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.ResolutionSyntax;
-import javax.security.auth.callback.TextInputCallback;
 
 @RestController
 @RequestMapping("/api/ticketdetails")
