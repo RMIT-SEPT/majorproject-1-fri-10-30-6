@@ -13,9 +13,17 @@ public class FlightService {
     private FlightRepository flightRepository;
 
     public Flight saveFlight(Flight flight){
-        flight.setAirlineID(flight.getAirlineID().toUpperCase());
 
-        return flightRepository.save(flight);
+        Flight flight1 = flightRepository.findByAirlineID(flight.getAirlineID());
+
+        if (flight1 == null){
+            flight.setAirlineID(flight.getAirlineID().toUpperCase());
+
+            return flightRepository.save(flight);
+        } else {
+            throw new AccountException("Flight already Exists");
+        }
+
     }
 
     public Flight findByFlightId(String airlineid){

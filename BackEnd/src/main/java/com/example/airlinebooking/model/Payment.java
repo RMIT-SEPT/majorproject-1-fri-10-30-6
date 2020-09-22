@@ -10,6 +10,8 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private String ticketId;
+    private String planeId;
     private String userName;
     private int cardnumber;
     private String cardtype;
@@ -64,6 +66,18 @@ public class Payment {
     public void setExpireDate(String expireDate) {
         this.expireDate = expireDate;
     }
+
+    public String getTicketId(){
+        return this.ticketId;
+    }
+
+    public void setTicketId(String ticketId){
+        this.ticketId = ticketId;
+    }
+
+    public String getPlaneId(){return this.planeId;}
+
+    public void setPlaneId(String planeId) {this.planeId = planeId;}
 
     public Payment() {
 

@@ -10,6 +10,8 @@ public interface TicketDetailsRepository extends CrudRepository<TicketDetails, L
     @Override
     Iterable<TicketDetails> findAll();
 
+    TicketDetails findByTicketID(String ticketID);
+
 
 
 

@@ -1,7 +1,7 @@
 package com.example.airlinebooking.web;
 
 
-import com.example.airlinebooking.model.Flight;
+
 import com.example.airlinebooking.model.FlightDetails;
 import com.example.airlinebooking.services.FlightDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;

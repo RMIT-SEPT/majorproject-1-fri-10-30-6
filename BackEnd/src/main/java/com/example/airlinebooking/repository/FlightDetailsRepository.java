@@ -11,4 +11,5 @@ public interface FlightDetailsRepository extends CrudRepository<FlightDetails, L
     @Override
     Iterable<FlightDetails> findAll();
 
+
 }
