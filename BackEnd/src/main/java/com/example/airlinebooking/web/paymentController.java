@@ -40,5 +40,29 @@ public class paymentController {
         }
     }
 
+    @GetMapping("/{username}")
+    public ResponseEntity<?> findPaymentByUsername(@PathVariable String username){
+        Payment payment = paymentService.findByUsername(username);
 
+        return new ResponseEntity<Payment>(payment,HttpStatus.FOUND);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findPaymentByID(@PathVariable long id){
+        Payment payment = paymentService.findByID(id);
+
+        return new ResponseEntity<Payment>(payment,HttpStatus.FOUND);
+    }
+
+    @GetMapping("/all")
+    public Iterable<?> getAllPayments(){
+        return paymentService.findAll();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deletePayment(@PathVariable long id){
+        paymentService.deletePaymentInfo(id);
+
+        return new ResponseEntity<String>("Payment Deleted",HttpStatus.OK);
+    }
 }

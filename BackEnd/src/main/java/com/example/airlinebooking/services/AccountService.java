@@ -50,9 +50,21 @@ public class AccountService {
 
         if (account == null){
             throw new AccountException("Account does not exist!");
+        } else {
+            accountRepository.delete(account);
         }
 
-        accountRepository.delete(account);
+
+    }
+
+    public Account findById(long id){
+        Account account = accountRepository.findByID(id);
+
+        if (account == null){
+            throw new AccountException("Account Does Not Exist!");
+        } else {
+            return account;
+        }
     }
 
 }

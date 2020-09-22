@@ -37,4 +37,30 @@ public class FlightService {
         }
 
     }
+
+    public Flight findByID(long id){
+        Flight flight = flightRepository.findByID(id);
+
+        if (flight == null){
+            throw new AccountException("This Flight does not exist");
+        } else {
+            return flight;
+        }
+    }
+
+    public void deleteFlight(long id){
+        Flight flight = flightRepository.findByID(id);
+
+        if (flight == null){
+            throw new AccountException("This Flight does not exist");
+        } else {
+            flightRepository.delete(flight);
+        }
+    }
+
+    public Iterable<Flight> getAllFlights(){
+        return flightRepository.findAll();
+    }
+
+
 }

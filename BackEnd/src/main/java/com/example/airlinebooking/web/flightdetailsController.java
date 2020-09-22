@@ -25,9 +25,31 @@ public class flightdetailsController {
     }
 
     @GetMapping("/{flightid}")
-    public ResponseEntity<?> findbyFlightId(@RequestBody String flightid){
+    public ResponseEntity<?> findbyFlightId(@PathVariable String flightid){
         FlightDetails flightDetails = flightDetailsService.findFlightbyFlightId(flightid);
 
         return new ResponseEntity<FlightDetails>(flightDetails,HttpStatus.FOUND);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findByID(@PathVariable long id){
+        FlightDetails flightDetails = flightDetailsService.findFlightbyId(id);
+
+        return new ResponseEntity<FlightDetails>(flightDetails,HttpStatus.FOUND);
+    }
+
+    @GetMapping("/all")
+    public Iterable<?> findALlFlightDetails(){
+        return flightDetailsService.findAllFlightDetails();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteFlightDetails(@PathVariable long id){
+        flightDetailsService.deleteFlight(id);
+
+        return new ResponseEntity<String>("Flight Details deleted", HttpStatus.OK);
+    }
+
+
+
 }

@@ -37,7 +37,31 @@ public class TicketService {
     public TicketDetails findTicketByID(String ticketID){
         TicketDetails ticketDetails = ticketDetailsRepository.findByTicketID(ticketID);
 
-        return ticketDetails;
+        if (ticketDetails == null){
+            throw new AccountException("Ticket Does Not Exist!");
+        } else {
+            return ticketDetails;
+        }
+    }
+
+    public TicketDetails findTicketByUniqueID(long id){
+        TicketDetails ticketDetails = ticketDetailsRepository.findByID(id);
+        if (ticketDetails == null){
+            throw new AccountException("Ticket Does Not Exist!");
+        } else {
+            return ticketDetails;
+        }
+    }
+
+    public void deleteTicket(long id){
+        TicketDetails ticketDetails = ticketDetailsRepository.findByID(id);
+
+        if (ticketDetails == null){
+            throw new AccountException("Ticket Does Not Exist!");
+        } else {
+            ticketDetailsRepository.delete(ticketDetails);
+        }
+
     }
 
 

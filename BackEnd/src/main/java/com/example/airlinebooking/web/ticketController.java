@@ -45,27 +45,23 @@ public class ticketController {
     }
 
     @GetMapping("/{flightid}")
-    public ResponseEntity<?> getTicketByFlightId(@RequestBody String flightid){
+    public ResponseEntity<?> getTicketByFlightId(@PathVariable String flightid){
         TicketDetails ticketDetails1 = ticketService.getTicketsByFlightId(flightid);
 
         return new ResponseEntity<TicketDetails>(ticketDetails1, HttpStatus.FOUND);
     }
 
-//    @GetMapping("/{flightid}")
-//    public ResponseEntity<?> getTicketByFlightId (@RequestBody String flightid){
-//
-//    }
 
     @GetMapping("/all")
     public Iterable<TicketDetails> getAllTickets(){
         return ticketService.findAllTickets();
     }
 
-//    @DeleteMapping("{ticketid}")
-//    public ResponseEntity<?> deleteTicketById (@RequestBody String id){
-//
-//
-//    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<?> deleteTicketById (@PathVariable long id){
 
+        ticketService.deleteTicket(id);
 
+        return new ResponseEntity<String>("Ticket Deletec",HttpStatus.OK);
+    }
 }

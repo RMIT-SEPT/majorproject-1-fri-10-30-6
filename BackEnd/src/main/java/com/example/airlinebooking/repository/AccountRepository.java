@@ -9,5 +9,7 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
     @Override
     Iterable<Account> findAll();
 
+    Account findByID(long id);
+
 
 }
