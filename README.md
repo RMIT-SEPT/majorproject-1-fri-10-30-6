@@ -21,8 +21,9 @@
 * Github Front-End: https://github.com/RMIT-SEPT/majorproject-1-fri-10-30-6/tree/Html
 * Github Database/Back-End: https://github.com/RMIT-SEPT/majorproject-1-fri-10-30-6/tree/database
 
-* Sprint Planning is in respetive Google Drive Folders 
+* Sprint Planning is in respective Google Drive Folders 
 * Communication Done via Microsoft Teams, via a team and a group chat, lab teacher is added to team. 
+* Unit Tests in backend tests folder.
 
 ## Code documentation
 
