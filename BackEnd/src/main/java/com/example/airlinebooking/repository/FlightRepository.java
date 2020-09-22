@@ -5,8 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface FlightRepository extends CrudRepository<Flight, Long> {
 
-    Flight findByAirlineID (String AirlineID);
-
+    Flight findByAirlineID(String airlineid);
     @Override
     Iterable<Flight> findAll();
 }

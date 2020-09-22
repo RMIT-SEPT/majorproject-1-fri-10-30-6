@@ -1,5 +1,6 @@
 package com.example.airlinebooking.services;
 
+import com.example.airlinebooking.exceptions.AccountException;
 import com.example.airlinebooking.model.Flight;
 import com.example.airlinebooking.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,5 +16,17 @@ public class FlightService {
         flight.setAirlineID(flight.getAirlineID().toUpperCase());
 
         return flightRepository.save(flight);
+    }
+
+    public Flight findByFlightId(String airlineid){
+
+        Flight flight = flightRepository.findByAirlineID(airlineid);
+
+        if (flight == null){
+            throw new AccountException("Airline Does not exist");
+        } else {
+            return flight;
+        }
+
     }
 }

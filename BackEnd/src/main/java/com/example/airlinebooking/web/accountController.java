@@ -24,12 +24,26 @@ public class accountController {
     }
 
 
-    @GetMapping("{username}")
+    @GetMapping("/{username}")
     public ResponseEntity<?> getAccountbyId (@PathVariable String username){
 
         Account account1 = accountService.findByUsername(username);
         
         return new ResponseEntity<Account>(account1, HttpStatus.FOUND);
+
+    }
+
+    @GetMapping("/all")
+    public Iterable<Account> getAllAccounts(){
+        return accountService.findAllAccounts();
+    }
+
+    @DeleteMapping("/{username}")
+    public ResponseEntity<?> deleteAccount(@PathVariable String username){
+
+        accountService.deleteAccountByIdentifier(username);
+
+        return new ResponseEntity<String>("The account was deleted", HttpStatus.OK);
 
     }
 

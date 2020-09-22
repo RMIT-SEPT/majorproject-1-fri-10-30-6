@@ -5,13 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
 public class FlightDetails {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String flightID;
     private String flightDepartureDate;
     private double price;
     private int seatsAvailable;
+
 
     public FlightDetails(String flightID, String flightDepartureDate, double price, int seatsAvailable) {
         this.flightID = flightID;
@@ -51,4 +55,10 @@ public class FlightDetails {
     public void setSeatsAvailable(int seatsAvailable) {
         this.seatsAvailable = seatsAvailable;
     }
+
+
+    public FlightDetails(){
+
+    }
+
 }
