@@ -1,0 +1,19 @@
+package model;
+
+
+public class Seat {
+      int seatNum;
+      Flight flight;
+
+public Seat(int num,Flight flight){
+    this.seatNum = seatNum;
+    this.flight = flight;
+}
+
+public int getSeatNum(){
+    return seatNum;
+}
+
+public Flight getFlight(){
+    return flight;
+}
