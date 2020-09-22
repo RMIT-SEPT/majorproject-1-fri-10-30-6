@@ -1,7 +1,4 @@
-package com.example.airlinebooking.model;
-
-
-import org.omg.CORBA.PRIVATE_MEMBER;
+package flightbooking.backend.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

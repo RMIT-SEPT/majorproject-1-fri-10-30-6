@@ -1,13 +1,15 @@
-package com.example.airlinebooking.model;
+package flightbooking.backend.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Flight {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class FlightInfo {
+
+    @Id @GeneratedValue
+    private Integer id;
     private String airlineID;
     private String airlineName;
     private String location_From;
@@ -15,12 +17,30 @@ public class Flight {
     private String departure;
     private String arrival;
     private int totalSeats;
-
     private Date createdAt;
     private Date updatedAt;
 
-    public Flight() {
 
+    public FlightInfo(Integer id, String airlineID, String airlineName, String location_From, String location_To,
+                      String departure, String arrival, int totalSeats, Date createdAt, Date updatedAt) {
+        this.id = id;
+        this.airlineID = airlineID;
+        this.airlineName = airlineName;
+        this.location_From = location_From;
+        this.location_To = location_To;
+        this.departure = departure;
+        this.arrival = arrival;
+        this.totalSeats = totalSeats;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getAirlineID() {
@@ -79,13 +99,19 @@ public class Flight {
         this.totalSeats = totalSeats;
     }
 
-    @PrePersist
-    protected void onCreate(){
-        this.createdAt= new Date();
-    }
-    @PreUpdate
-    protected  void onUpdate(){
-        this.updatedAt = new Date();
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
