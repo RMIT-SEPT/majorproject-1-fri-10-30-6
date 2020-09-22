@@ -1,6 +1,7 @@
 package com.example.airlinebooking.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -8,14 +9,21 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @NotBlank(message="Username is required")
     private String username;
     private String password;
+    @NotBlank(message="First Name is required")
     private String firstname;
+    @NotBlank(message="Last Name is required")
     private String lastname;
+    @NotBlank(message="Email is required")
     private String email;
     private String gender;
+    @NotBlank(message="Country is required")
     private String country;
+    @NotBlank(message="Address is required")
     private String address;
+    @NotBlank(message="Phone Number is required")
     private String phoneNum;
 
     private Date createdAt;
@@ -25,6 +33,19 @@ public class Account {
 
     public Account() {
 
+    }
+
+    public Account(long id, String username, String password, String firstname, String lastname, String email, String gender, String country, String address, String phoneNum) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.gender = gender;
+        this.country = country;
+        this.address = address;
+        this.phoneNum = phoneNum;
     }
 
     public String getUsername() {
