@@ -92,8 +92,8 @@ public class Flight {
         return this.id;
     }
 
-    public long setId(long id){
-        return this.id = id;
+    public void setId(long id){
+        this.id = id;
     }
 
 }
