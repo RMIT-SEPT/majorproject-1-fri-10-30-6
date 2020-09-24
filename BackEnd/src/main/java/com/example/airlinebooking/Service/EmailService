@@ -1,0 +1,54 @@
+package Service;
+
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+
+
+public class EmailService{
+    private static String username = "Airline";  // prefix@gmail.com
+    private String password;
+    private String emailAddress;
+
+
+    public void sendAttachmentEmail(Session session,String toEmail, String subject, String body){
+        try {
+            Message message = new Message(session);
+            message.addHeader("Content-type", "text/HTML;charset=UTF-8");
+            message.addHeader("format", "flowed");
+            message.setForm(new InternetAddress("no_reply@gmail.com", "NO_REPLY"));
+            message.setReplyTo(InternetAddress.parse("no_reply@gmail.com", false));
+            message.setSubject(subject, "UTF-8");
+            message.setSendDate(new Date());
+            message.setRecipients(Message.ReceipientType.TO, InternetAddress.parse(toEmail, false));
+            Body messageBody = new Body(); //create body part for text message
+            messageBody.setText(body);
+            Multiple multiple = new Multiple(); // create multiple body part for attachment
+            multiple.addBody(messageBody);
+
+            //create attchment
+            messageBody = new Body();
+            String fileName = "email.txt";
+            Source source -new FileDataSource(fileName);
+            messageBody.setFileName(fileName);
+            multiple.addBody(messageBody);
+            message.setContent(multiple);
+
+            //send message
+            Transport transport = session.getTransport();
+            transport.connect(userName, password);
+            transport.send(message);
+            System.out.println("Email has sent with attchment.");
+            transport.close();
+        }catch(AddressException e){
+            e.printStackTrace();
+        }catch(MessagingException e) {
+            e.printStackTrace();
+        }catch(UnsupportedEncodingException e){
+            e.printStackTrace()
+
+
+        }
+    }
+
+}
