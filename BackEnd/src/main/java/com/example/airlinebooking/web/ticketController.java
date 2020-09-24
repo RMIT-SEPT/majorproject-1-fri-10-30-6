@@ -27,10 +27,6 @@ public class ticketController {
     public ResponseEntity<TicketDetails> createNewTicket(@RequestBody TicketDetails ticketDetails){
 
         FlightDetails flightDetails = flightDetailsService.findFlightbyFlightId(ticketDetails.getFlightID());
-//
-//        TicketDetails ticketDetails1 = ticketService.saveTicket(ticketDetails);
-//        flightDetails.setSeatsAvailable(flightDetails.getSeatsAvailable() - 1);
-//        return new ResponseEntity<TicketDetails>(ticketDetails1, HttpStatus.CREATED);
 
         if (flightDetails == null){
 
@@ -39,6 +35,7 @@ public class ticketController {
         } else {
             TicketDetails ticketDetails1 = ticketService.saveTicket(ticketDetails);
             flightDetails.setSeatsAvailable(flightDetails.getSeatsAvailable() - 1);
+            flightDetailsService.saveFlight(flightDetails);
             return new ResponseEntity<TicketDetails>(ticketDetails1, HttpStatus.CREATED);
         }
 

@@ -54,5 +54,14 @@ public class accountController {
         return new ResponseEntity<String>("The account was deleted", HttpStatus.OK);
 
     }
+
+/*    @PutMapping("/{id}")
+    public ResponseEntity<?> updateAccount(@PathVariable long id, @ResponseBody Account account){
+        Account account1 = accountService.findById(id);
+        account1 = account;
+        accountService.updateAccount(account1);
+
+        return new ResponseEntity<Account>(account1, HttpStatus.CREATED);
+    }*/
     
 }

@@ -21,7 +21,9 @@ public class FlightService {
 
             return flightRepository.save(flight);
         } else {
-            throw new AccountException("Flight already Exists");
+            flight1 = flight;
+
+            return flightRepository.save(flight1);
         }
 
     }

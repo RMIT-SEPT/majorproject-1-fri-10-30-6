@@ -120,5 +120,12 @@ public class Account {
         this.updatedAt = new Date();
      }
 
+     public long getId(){
+        return this.id;
+     }
+
+     public long setId(long id){
+        return this.id = id;
+     }
 
 }

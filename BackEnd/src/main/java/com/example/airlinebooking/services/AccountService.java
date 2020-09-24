@@ -6,8 +6,6 @@ import com.example.airlinebooking.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.beans.PropertyVetoException;
-
 @Service
 public class AccountService {
 
@@ -15,11 +13,16 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     public Account saveAccount(Account account){
-
-
         try{
-            account.setUsername(account.getUsername());
-            return accountRepository.save(account);
+            if (accountRepository.findByid(account.getId())!=null){
+                Account account1 = accountRepository.findByid(account.getId());
+                account1 = account;
+
+                return accountRepository.save(account1);
+            } else {
+                account.setUsername(account.getUsername());
+                return accountRepository.save(account);
+            }
         } catch (Exception e){
             throw new AccountException("This account already exists ");
         }
@@ -65,6 +68,10 @@ public class AccountService {
         } else {
             return account;
         }
+    }
+
+    public void  updateAccount(Account account){
+        saveAccount(account);
     }
 
 }
