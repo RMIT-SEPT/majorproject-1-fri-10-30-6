@@ -1,0 +1,9 @@
+public interface AirportService{
+    public abstract List<Airport> getCountry(String country);
+    public abstract List<Airport>getAll();
+    public abstract  getAirportCode(String airportCode);
+    public abstract deleteByAirportCode(String airportCode);
+    //public abstract saveByAirport(Airport airport);
+
+
+}
