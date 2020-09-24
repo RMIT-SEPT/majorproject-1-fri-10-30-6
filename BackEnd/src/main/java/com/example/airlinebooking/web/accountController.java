@@ -25,13 +25,20 @@ public class accountController {
     }
 
 
-    @GetMapping("/{username}")
-    public ResponseEntity<?> getAccountbyId (@PathVariable String username){
+    @GetMapping("/accountbyusername/{username}")
+    public ResponseEntity<?> getAccountbyUsername(@PathVariable String username){
 
         Account account1 = accountService.findByUsername(username);
         
         return new ResponseEntity<Account>(account1, HttpStatus.FOUND);
 
+    }
+
+    @GetMapping("accountbyid/{id}")
+    public ResponseEntity<?> getAccountbyID(@PathVariable long id){
+        Account account = accountService.findById(id);
+
+        return new ResponseEntity<Account>(account,HttpStatus.FOUND);
     }
 
     @GetMapping("/all")

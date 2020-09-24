@@ -45,7 +45,7 @@ public class TicketService {
     }
 
     public TicketDetails findTicketByUniqueID(long id){
-        TicketDetails ticketDetails = ticketDetailsRepository.findByID(id);
+        TicketDetails ticketDetails = ticketDetailsRepository.findByid(id);
         if (ticketDetails == null){
             throw new AccountException("Ticket Does Not Exist!");
         } else {
@@ -54,7 +54,7 @@ public class TicketService {
     }
 
     public void deleteTicket(long id){
-        TicketDetails ticketDetails = ticketDetailsRepository.findByID(id);
+        TicketDetails ticketDetails = ticketDetailsRepository.findByid(id);
 
         if (ticketDetails == null){
             throw new AccountException("Ticket Does Not Exist!");
@@ -63,6 +63,13 @@ public class TicketService {
         }
 
     }
+
+    public TicketDetails updateTicket(long id, TicketDetails ticketDetails){
+        TicketDetails ticketDetails1 = ticketDetailsRepository.findByid(id);
+        return ticketDetails1 = ticketDetailsRepository.save(ticketDetails);
+    }
+
+
 
 
 }

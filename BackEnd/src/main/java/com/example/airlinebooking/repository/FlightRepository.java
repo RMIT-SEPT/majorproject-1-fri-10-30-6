@@ -10,6 +10,6 @@ public interface FlightRepository extends CrudRepository<Flight, Long> {
     @Override
     Iterable<Flight> findAll();
 
-    Flight findByID(long id);
+    Flight findByid(long id);
 
 }

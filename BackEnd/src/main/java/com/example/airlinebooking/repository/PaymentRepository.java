@@ -15,6 +15,6 @@ public interface PaymentRepository extends CrudRepository<Payment, Long> {
 
     Payment findByPlaneId(String planeid);
 
-    Payment findByID(long id);
+    Payment findByid(long id);
     
 }

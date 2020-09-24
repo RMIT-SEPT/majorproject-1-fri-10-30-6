@@ -12,10 +12,6 @@ public interface TicketDetailsRepository extends CrudRepository<TicketDetails, L
 
     TicketDetails findByTicketID(String ticketID);
 
-    TicketDetails findByID(long id);
-
-
-
-
+    TicketDetails findByid(long id);
 
 }

@@ -58,7 +58,7 @@ public class AccountService {
     }
 
     public Account findById(long id){
-        Account account = accountRepository.findByID(id);
+        Account account = accountRepository.findByid(id);
 
         if (account == null){
             throw new AccountException("Account Does Not Exist!");

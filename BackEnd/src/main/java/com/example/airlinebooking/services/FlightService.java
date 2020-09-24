@@ -39,7 +39,7 @@ public class FlightService {
     }
 
     public Flight findByID(long id){
-        Flight flight = flightRepository.findByID(id);
+        Flight flight = flightRepository.findByid(id);
 
         if (flight == null){
             throw new AccountException("This Flight does not exist");
@@ -49,7 +49,7 @@ public class FlightService {
     }
 
     public void deleteFlight(long id){
-        Flight flight = flightRepository.findByID(id);
+        Flight flight = flightRepository.findByid(id);
 
         if (flight == null){
             throw new AccountException("This Flight does not exist");

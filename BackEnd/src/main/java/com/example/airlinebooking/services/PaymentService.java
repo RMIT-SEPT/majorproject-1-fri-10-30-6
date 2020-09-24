@@ -47,7 +47,7 @@ public class PaymentService {
     }
 
     public Payment findByID(long id) {
-        Payment payment = paymentRepository.findByID(id);
+        Payment payment = paymentRepository.findByid(id);
 
         if (payment == null) {
             throw new AccountException("This payment item does not exist!");
@@ -57,7 +57,7 @@ public class PaymentService {
     }
 
     public void deletePaymentInfo(long id){
-        Payment payment = paymentRepository.findByID(id);
+        Payment payment = paymentRepository.findByid(id);
         if (payment == null) {
             throw new AccountException("This payment item does not exist!");
         } else {

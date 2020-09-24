@@ -35,7 +35,7 @@ public class FlightDetailsService {
     }
 
     public FlightDetails findFlightbyId (long id){
-        FlightDetails flightDetails = flightDetailsRepository.findByID(id);
+        FlightDetails flightDetails = flightDetailsRepository.findByid(id);
 
         if (flightDetails == null){
             throw new AccountException("This flight does not exist!");
@@ -50,7 +50,7 @@ public class FlightDetailsService {
 
     public void deleteFlight(long id){
 
-        FlightDetails flightDetails = flightDetailsRepository.findByID(id);
+        FlightDetails flightDetails = flightDetailsRepository.findByid(id);
 
         if (flightDetails == null){
             throw new AccountException("This account does not exist");

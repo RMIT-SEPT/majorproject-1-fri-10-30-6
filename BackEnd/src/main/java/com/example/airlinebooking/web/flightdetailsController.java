@@ -24,14 +24,14 @@ public class flightdetailsController {
         return new ResponseEntity<FlightDetails>(flightDetails1, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{flightid}")
+    @GetMapping("/flightid/{flightid}")
     public ResponseEntity<?> findbyFlightId(@PathVariable String flightid){
         FlightDetails flightDetails = flightDetailsService.findFlightbyFlightId(flightid);
 
         return new ResponseEntity<FlightDetails>(flightDetails,HttpStatus.FOUND);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/dataid/{id}")
     public ResponseEntity<?> findByID(@PathVariable long id){
         FlightDetails flightDetails = flightDetailsService.findFlightbyId(id);
 
