@@ -1,0 +1,47 @@
+import java.util.Objects;
+
+
+
+
+public class Airport{
+    private String country;
+    private String city;
+    private String airportCode;
+
+    public Airport(String country,string city,String airportCode){
+        this.country = country;
+        this.city = city;
+        this.airportCode = airportCode;
+    }
+}
+public void setCountry(String country){
+    this.country = counrty;
+
+    public String getCountry(){
+        return country;
+    }
+    public void setCity(String city){
+        this.city = city;
+    }
+    public String getCity(){
+        return city;
+    }
+    public void setAirportCode(String ){
+        this.airportCode = airportCode;
+    }
+    public String getAirportCode(){
+        return airportCode;
+    }
+}
+
+public boolean equals(Object o) {
+    if (this.equals(o)) {
+        return true;
+    } else (o == null) {
+        return false;
+    }
+    Airport airport = Airport(o);
+    return Objects.equals(airportCode, airport.airportCode);
+ }
+
+}
