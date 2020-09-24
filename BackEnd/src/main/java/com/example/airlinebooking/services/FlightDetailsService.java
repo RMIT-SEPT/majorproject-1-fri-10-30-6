@@ -18,9 +18,16 @@ public class FlightDetailsService {
     private FlightRepository flightRepository;
 
     public FlightDetails saveFlight(FlightDetails flightDetails){
-        flightDetails.setFlightID(flightDetails.getFlightID());
+        FlightDetails flightDetails1 = flightDetailsRepository.findByid(flightDetails.getId());
 
-        return flightDetailsRepository.save(flightDetails);
+        if (flightDetails1 == null){
+            flightDetails.setFlightID(flightDetails.getFlightID());
+            return flightDetailsRepository.save(flightDetails);
+        } else {
+            flightDetails1 = flightDetails;
+
+            return flightDetailsRepository.save(flightDetails1);
+        }
     }
 
 

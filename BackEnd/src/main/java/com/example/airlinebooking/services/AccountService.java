@@ -13,9 +13,11 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     public Account saveAccount(Account account){
+
+        Account account1 = accountRepository.findByid(account.getId());
         try{
-            if (accountRepository.findByid(account.getId())!=null){
-                Account account1 = accountRepository.findByid(account.getId());
+            if (account1 != null){
+
                 account1 = account;
 
                 return accountRepository.save(account1);

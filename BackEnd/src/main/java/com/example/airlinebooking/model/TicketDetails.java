@@ -83,4 +83,8 @@ public class TicketDetails {
     public TicketDetails() {
 
     }
+
+    public long getId(){
+        return this.id;
+    }
 }

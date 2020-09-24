@@ -56,6 +56,10 @@ public class FlightDetails {
         this.seatsAvailable = seatsAvailable;
     }
 
+    public long getId(){
+        return this.id;
+    }
+
 
     public FlightDetails(){
 

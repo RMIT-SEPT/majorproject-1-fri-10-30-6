@@ -13,8 +13,15 @@ public class PaymentService {
     PaymentRepository paymentRepository;
 
     public Payment savePayment(Payment payment){
-        return paymentRepository.save(payment);
+        Payment payment1 = paymentRepository.findByid(payment.getId());
 
+        if (payment1 == null){
+            payment.setUserName(payment.getUserName());
+            return paymentRepository.save(payment);
+        } else {
+            payment1 = payment;
+            return paymentRepository.save(payment1);
+        }
     }
 
     public Payment findByUsername(String username){

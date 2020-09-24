@@ -82,4 +82,8 @@ public class Payment {
     public Payment() {
 
     }
+
+    public long getId(){
+        return this.id;
+    }
 }

@@ -18,9 +18,19 @@ public class TicketService {
 
 
     public TicketDetails saveTicket(TicketDetails ticketDetails){
-        ticketDetails.setFlightID(ticketDetails.getFlightID());
+        TicketDetails ticketDetails1 = ticketDetailsRepository.findByid(ticketDetails.getId());
 
-        return ticketDetailsRepository.save(ticketDetails);
+        if (ticketDetails == null){
+            ticketDetails.setFlightID(ticketDetails.getFlightID());
+
+            return ticketDetailsRepository.save(ticketDetails);
+        } else {
+            ticketDetails1 = ticketDetails;
+
+            return ticketDetailsRepository.save(ticketDetails1);
+        }
+
+
     }
 
 
