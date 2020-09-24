@@ -44,7 +44,7 @@ public class ticketController {
 
     }
 
-    @GetMapping("/{flightid}")
+    @GetMapping("/flightid/{flightid}")
     public ResponseEntity<?> getTicketByFlightId(@PathVariable String flightid){
         TicketDetails ticketDetails1 = ticketService.getTicketsByFlightId(flightid);
 

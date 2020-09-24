@@ -40,14 +40,14 @@ public class paymentController {
         }
     }
 
-    @GetMapping("/{username}")
+    @GetMapping("/username/{username}")
     public ResponseEntity<?> findPaymentByUsername(@PathVariable String username){
         Payment payment = paymentService.findByUsername(username);
 
         return new ResponseEntity<Payment>(payment,HttpStatus.FOUND);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/dataid/{id}")
     public ResponseEntity<?> findPaymentByID(@PathVariable long id){
         Payment payment = paymentService.findByID(id);
 

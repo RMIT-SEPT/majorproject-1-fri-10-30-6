@@ -54,7 +54,5 @@ public class accountController {
         return new ResponseEntity<String>("The account was deleted", HttpStatus.OK);
 
     }
-
-
-
+    
 }
