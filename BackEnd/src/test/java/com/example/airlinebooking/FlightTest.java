@@ -38,5 +38,11 @@ class FlightTest {
     @Test
     public void testAddFlight(){
 
+        flightService.saveFlight(flight);
+
+        Flight flight1 = flightService.findByFlightId(flight.getAirlineID());
+
+        assertEquals(flight.getAirlineID(),flight1.getAirlineID());
+
     }
 }
