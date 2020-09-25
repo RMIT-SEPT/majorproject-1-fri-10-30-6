@@ -2,6 +2,7 @@ package com.example.airlinebooking;
 
 import com.example.airlinebooking.model.Account;
 import com.example.airlinebooking.model.Flight;
+import com.example.airlinebooking.repository.AccountRepository;
 import com.example.airlinebooking.services.AccountService;
 import com.example.airlinebooking.services.FlightService;
 import com.example.airlinebooking.web.accountController;
@@ -10,14 +11,25 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.*;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import static org.junit.jupiter.api.Assertions.*;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.nio.channels.AcceptPendingException;
+
+import static org.junit.jupiter.api.Assertions.*;
+@RunWith(SpringRunner.class)
 @SpringBootTest
 class TestJUnit {
-    Account account = new Account();
+    Account account = new Account("Test","Password","Firstname","Lastname","email@email.com","Non","Australia","Address","04303030303");
     Flight flight = new Flight();
+
+    @Autowired
     AccountService accountService = new AccountService();
+
+    @Autowired
     FlightService flightService = new FlightService();
 
 
@@ -25,16 +37,6 @@ class TestJUnit {
 
     @BeforeEach
     public void init(){
-        account.setUsername("Test");
-        account.setPassword("passwordTest");
-        account.setFirstname("Firstname");
-        account.setLastname("Lastname");
-        account.setAddress("Address");
-        account.setCountry("Country");
-        account.setGender("Gender");
-        account.setEmail("test@mail.com");
-        account.setPhoneNum("040202020202");
-
     flight.setAirlineID("A123");
     flight.setAirlineName("TestLine");
     flight.setDeparture("Melbourne");
@@ -65,9 +67,8 @@ class TestJUnit {
 
     @Test
     public void testAccountAdd(){
-
         accountService.saveAccount(account);
-        accountService.findAllAccounts();
+        System.out.println(accountService.findAllAccounts());
     }
 
     @Test

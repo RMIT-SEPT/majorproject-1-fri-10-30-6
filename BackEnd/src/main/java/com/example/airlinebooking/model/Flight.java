@@ -22,6 +22,16 @@ public class Flight {
     public Flight() {
 
     }
+    
+    public Flight(String airlineID, String airlineName, String location_From, String location_To, String departure, String arrival, int totalSeats){
+        this.airlineID = airlineID;
+        this.airlineName = airlineName;
+        this.location_From = location_From;
+        this.location_To = location_To;
+        this.departure = departure;
+        this.arrival = arrival;
+        this.totalSeats = totalSeats;
+    }
 
     public String getAirlineID() {
         return airlineID;
