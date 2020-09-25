@@ -21,8 +21,7 @@ public class TicketDetails {
     private String departureDate;
     private String status;
 
-    public TicketDetails(long id, String ticketID, String passportNumber, String fullName, String flightID, String departureDate, String status) {
-        this.id = id;
+    public TicketDetails(String ticketID, String passportNumber, String fullName, String flightID, String departureDate, String status) {
         this.ticketID = ticketID;
         this.PassportNumber = passportNumber;
         this.fullName = fullName;

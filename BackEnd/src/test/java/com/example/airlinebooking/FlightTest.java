@@ -45,4 +45,15 @@ class FlightTest {
         assertEquals(flight.getAirlineID(),flight1.getAirlineID());
 
     }
+
+    @Test
+    public void testGetAirlineName(){
+        flightService.saveFlight(flight);
+
+        Flight flight1 = flightService.findByID(1);
+
+        assertEquals(flight.getAirlineID(),flight1.getAirlineID());
+    }
+
+
 }
