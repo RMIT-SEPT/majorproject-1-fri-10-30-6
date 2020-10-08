@@ -1,0 +1,68 @@
+public class Passenger{
+    private String firstName;
+    private String lastName;
+    private String passport;
+    private Baggage baggage;
+    private Seat seat;
+    private String passengerId;
+    private List<Passenger> passengerList = new Arraylist();
+
+
+    public String getFirstName()
+    {
+
+        return firstName;
+    }
+
+    public void setFirstName(String firstName)
+    {
+        this.firstName = firstName;
+    }
+
+    public String getLastName()
+    {
+
+        return lastName;
+    }
+
+    public void setLastName(String lastName)
+    {
+        this.lastName = lastName;
+    }
+    public String getPassport(){
+        return passport;
+    }
+    public String setPassport(String passengerId){
+        this.passport = passport;
+    }
+
+    public String getPassengerId() {
+        return passengerId;
+    }
+    public void setPassengerId(String passengerId){
+        this.passengerId = = this.firstName.substring(0,3) + this.lastName.substring(0,3);
+    }
+
+    public Seat getSeat()
+    {
+        return seat;
+    }
+    public void setSeat(Seat set){
+        this.seat = seat;
+    }
+
+    public Baggage getBaggage() {
+        return baggage;
+    }
+
+    public void setBaggage(Baggage baggage) {
+        this.baggage = baggage;
+    }
+
+    public List<Passenger> getPassengerList() {
+        return passengerList;
+    }
+    public void setPassengerList(){
+        this.passengerList = passengerList
+    }
+}

@@ -1,0 +1,57 @@
+public class Baggage
+{
+    private Passenger passengerId;
+    private String baggageId;
+    private double weight;
+    private Baggage[]collectionOfCheckedBaggage;
+
+    //Baggage constructor
+    public Baggage(String id, String passengerId, double weight, DateTime checkedInDate) {
+        this.baggageId=baggageId +"_"+ passengerId ;
+        this.weight = weight;
+
+    }
+    public String getPassengerId(){
+        return passengerId;
+    }
+    public void setPassengerId(Passenger passengerId){
+        this.passengerId = passengerId;
+    }
+    public String getBaggageId(){
+        return baggageId;
+    }
+    public void setBaggageId(String baggageId){
+        this.baggageId = baggageId;
+    }
+    public double getWeight(){
+        return weight;
+    }
+    public void setWeight(double weight){
+        this.weight = weight;
+    }
+
+    public String getDetails() {
+        String details = "";
+        details += String.format("%-25s%s\n","Baggage ID:",this.id);
+        details += String.format("%-25s%s\n","Weight:",this.weight);
+
+        return details;
+    }
+
+    public String checkInBag(String baggageId, double weight) {
+
+        double total=0;
+
+        if(!this.baggageIde.equals(baggageId)) {
+            return "failed";
+        }
+
+        for(int i=0;i<this.collectionOfCheckedBaggage.length;i++)
+        {
+            if(this.collectionOfCheckedBaggage[i]!=null)
+            {
+                total+=this.collectionOfCheckedBaggage[i].getWeight();
+            }
+        }
+
+

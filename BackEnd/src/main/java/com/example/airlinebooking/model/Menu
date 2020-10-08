@@ -1,0 +1,23 @@
+public class Menu(){
+
+     public void Menu()
+        {
+        System.out.println("What meal do you want?");
+        Scanner sc = new Scanner(System.in);
+        String meal = sc.nextLine();
+
+        switch (meal)
+        {
+        case"One":
+        System.out.println("Beef burger");
+
+        case"Two":
+        System.out.println("Chicken Curry");
+
+
+        case"Three":
+        System.out.println("Pork rice");
+        
+
+        sc.close();
+        }
