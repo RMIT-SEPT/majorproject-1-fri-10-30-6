@@ -22,6 +22,7 @@ public class WorkersService {
             return workersRepository.save(workersAccount);
         } else {
             workersAccount1 = Optional.of(workersAccount);
+            return workersRepository.save(workersAccount1);
         }
     }
 
