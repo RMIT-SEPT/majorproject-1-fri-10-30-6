@@ -50,8 +50,8 @@ public class AccountService {
     }
 
 
-    public void deleteAccountByIdentifier(String username){
-        Account account = accountRepository.findByUsername(username);
+    public void deleteAccountByIdentifier(long id){
+        Account account = accountRepository.findByid(id);
 
         if (account == null){
             throw new AccountException("Account does not exist!");

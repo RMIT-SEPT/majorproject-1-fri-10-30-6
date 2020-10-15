@@ -54,7 +54,7 @@ class AccountTest {
 
     @Test
     public void testDeleteAccount(){
-        accountService.deleteAccountByIdentifier(account.getUsername());
+        accountService.deleteAccountByIdentifier(account.getId());
 
 //        Account account1 = accountService.findByUsername(account.getUsername());
 

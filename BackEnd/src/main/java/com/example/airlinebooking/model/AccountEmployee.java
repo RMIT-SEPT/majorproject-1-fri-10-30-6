@@ -9,18 +9,19 @@ public class AccountEmployee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
-    private String password;
     private String firstname;
     private String lastname;
-    private long company;
+    private String profession;
+    private String specialty;
+    private String company;
 
 
-
-    public AccountEmployee(String username, String password, String firstname, String lastname, long company ){
+    public AccountEmployee(String username, String firstname, String lastname, String profession, String specialty, String company) {
         this.username = username;
-        this.password = password;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.profession = profession;
+        this.specialty = specialty;
         this.company = company;
     }
 
@@ -36,13 +37,6 @@ public class AccountEmployee {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public String getFirstname() {
         return firstname;
@@ -69,11 +63,27 @@ public class AccountEmployee {
         this.id = id;
     }
 
-    public long getCompany() {
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
+    }
+
+    public String getCompany() {
         return company;
     }
 
-    public void setCompany(long company) {
+    public void setCompany(String company) {
         this.company = company;
     }
 }

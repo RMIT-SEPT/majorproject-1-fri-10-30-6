@@ -42,16 +42,28 @@ public class AccountEmployeeService {
     }
 
 
+    public AccountEmployee findBySpecialty(String Specialty){
+        AccountEmployee accountEmployee = accountEmployeeRepository.findBySpecialty(Specialty);
 
-    public AccountEmployee findByCompany(long id){
-        AccountEmployee accountEmployee = accountEmployeeRepository.findByCompany(id);
+        return accountEmployee;
+    }
 
-        if (accountEmployee == null){
-            System.out.println();
-            return null;
-        } else {
-            return accountEmployee;
-        }
+    public AccountEmployee findByProfession(String Profession){
+        AccountEmployee accountEmployee = accountEmployeeRepository.findByProfession(Profession);
+
+        return accountEmployee;
+    }
+
+    public AccountEmployee findByCompany(String Company){
+        AccountEmployee accountEmployee = accountEmployeeRepository.findByCompany(Company);
+
+        return accountEmployee;
+    }
+
+    public void deleteEmployee(long id){
+        AccountEmployee accountEmployee1 = accountEmployeeRepository.findById(id);
+
+        accountEmployeeRepository.delete(accountEmployee1);
     }
 
 

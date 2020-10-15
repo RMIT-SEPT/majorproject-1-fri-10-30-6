@@ -22,9 +22,6 @@ public class EmployeeController {
         return new ResponseEntity<AccountEmployee>(accountEmployee1, HttpStatus.CREATED);
     }
 
-
-
-
     @GetMapping("/all")
     public Iterable<?> findAll(){
         return accountEmployeeService.findAll();
@@ -35,15 +32,22 @@ public class EmployeeController {
     public ResponseEntity<?> findById(@PathVariable long id){
         AccountEmployee accountEmployee = accountEmployeeService.findById(id);
 
-        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.CREATED);
+        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.FOUND);
     }
 
+    @GetMapping("/company/{company}")
+    ResponseEntity<?> findByCompany(@PathVariable String company){
+        AccountEmployee accountEmployee = accountEmployeeService.findByCompany(company);
 
-    @GetMapping("/company/{id}")
-    public ResponseEntity<?> findByCompanyId(@PathVariable long id){
-        AccountEmployee accountEmployee = accountEmployeeService.findByCompany(id);
+        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.FOUND);
+    }
 
-        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.CREATED);
+    @DeleteMapping("/delete/{id}")
+    private ResponseEntity<?> deleteByID(@PathVariable long id){
+
+        accountEmployeeService.deleteEmployee(id);
+
+        return new ResponseEntity<String>("Account is deleted",HttpStatus.OK);
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.airlinebooking.services;
 
+import com.example.airlinebooking.exceptions.AccountException;
 import com.example.airlinebooking.model.Bookings;
 import com.example.airlinebooking.repository.BookingsRespository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,21 @@ public class BookingService {
         Bookings bookings = bookingsRespository.findByWorkerID(id);
 
         return bookings;
+    }
+
+    public void deleteBooking(long id){
+        Bookings bookings = bookingsRespository.findById(id);
+
+        if (bookings == null){
+            throw new AccountException("No Account Exists");
+        } else {
+            bookingsRespository.delete(bookings);
+        }
+    }
+
+
+    public Iterable<Bookings> getAll(){
+        return bookingsRespository.findAll();
     }
 
 
