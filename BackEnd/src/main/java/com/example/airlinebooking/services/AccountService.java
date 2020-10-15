@@ -26,7 +26,7 @@ public class AccountService {
                 return accountRepository.save(account);
             }
         } catch (Exception e){
-            throw new AccountException("This account already exists ");
+            throw new AccountException("Error with account");
         }
 
     }

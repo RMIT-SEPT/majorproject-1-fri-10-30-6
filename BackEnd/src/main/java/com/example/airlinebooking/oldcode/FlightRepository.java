@@ -1,7 +1,6 @@
-package com.example.airlinebooking.repository;
+package com.example.airlinebooking.oldcode;
 
-import com.example.airlinebooking.model.Account;
-import com.example.airlinebooking.model.Flight;
+import com.example.airlinebooking.oldcode.Flight;
 import org.springframework.data.repository.CrudRepository;
 
 public interface FlightRepository extends CrudRepository<Flight, Long> {

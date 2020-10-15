@@ -13,7 +13,6 @@ public class TimeSlot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long WorkersId;
-    private long AccountId;
     private String StartTime;
     private String EndTime;
     private String mon;
@@ -22,13 +21,15 @@ public class TimeSlot {
     private String thur;
     private String fri;
 
-    public TimeSlot(long workersId, String mon,  String tue,  String wed,  String thur,  String fri) {
+    public TimeSlot(long workersId, String mon,  String tue,  String wed,  String thur,  String fri, String startTime, String endTime) {
         this.mon = mon;
         this.tue = tue;
         this.wed = wed;
         this.thur = thur;
         this.fri = fri;
         this.WorkersId = workersId;
+        this.StartTime = startTime;
+        this.EndTime = endTime;
     }
 
     public TimeSlot() {
@@ -96,5 +97,21 @@ public class TimeSlot {
 
     public void setWorkersId(long workersId) {
         WorkersId = workersId;
+    }
+
+    public String getStartTime() {
+        return StartTime;
+    }
+
+    public void setStartTime(String startTime) {
+        StartTime = startTime;
+    }
+
+    public String getEndTime() {
+        return EndTime;
+    }
+
+    public void setEndTime(String endTime) {
+        EndTime = endTime;
     }
 }

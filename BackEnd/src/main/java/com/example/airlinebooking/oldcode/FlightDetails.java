@@ -1,4 +1,4 @@
-package com.example.airlinebooking.model;
+package com.example.airlinebooking.oldcode;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -7,7 +7,6 @@ public interface TimeSlotRepository extends CrudRepository<TimeSlot, Long> {
 
     TimeSlot findById(long id);
     TimeSlot findByWorkersId(long id);
-    TimeSlot findByAccountId(long id);
 
 
     @Override

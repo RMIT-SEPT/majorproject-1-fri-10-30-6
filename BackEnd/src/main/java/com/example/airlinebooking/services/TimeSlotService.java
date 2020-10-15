@@ -36,6 +36,10 @@ public class TimeSlotService {
         return timeSlot;
     }
 
+    public Iterable<TimeSlot> getAllTimeSlot(){
+        return timeSlotRepository.findAll();
+    }
+
 
 
 

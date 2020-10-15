@@ -1,11 +1,11 @@
-package com.example.airlinebooking.web;
+package com.example.airlinebooking.oldcode;
 
 
 import com.example.airlinebooking.exceptions.AccountException;
-import com.example.airlinebooking.model.FlightDetails;
-import com.example.airlinebooking.model.TicketDetails;
-import com.example.airlinebooking.services.FlightDetailsService;
-import com.example.airlinebooking.services.TicketService;
+import com.example.airlinebooking.oldcode.FlightDetails;
+import com.example.airlinebooking.oldcode.TicketDetails;
+import com.example.airlinebooking.oldcode.FlightDetailsService;
+import com.example.airlinebooking.oldcode.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

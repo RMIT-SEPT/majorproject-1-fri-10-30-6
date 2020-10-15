@@ -1,7 +1,7 @@
-package com.example.airlinebooking.web;
+package com.example.airlinebooking.oldcode;
 
-import com.example.airlinebooking.model.Flight;
-import com.example.airlinebooking.services.FlightService;
+import com.example.airlinebooking.oldcode.Flight;
+import com.example.airlinebooking.oldcode.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

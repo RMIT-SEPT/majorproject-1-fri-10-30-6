@@ -1,10 +1,10 @@
-package com.example.airlinebooking.services;
+package com.example.airlinebooking.oldcode;
 
 
 import com.example.airlinebooking.exceptions.AccountException;
-import com.example.airlinebooking.model.FlightDetails;
-import com.example.airlinebooking.repository.FlightDetailsRepository;
-import com.example.airlinebooking.repository.FlightRepository;
+import com.example.airlinebooking.oldcode.FlightDetails;
+import com.example.airlinebooking.oldcode.FlightDetailsRepository;
+import com.example.airlinebooking.oldcode.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

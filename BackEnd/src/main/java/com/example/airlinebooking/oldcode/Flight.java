@@ -1,4 +1,4 @@
-package com.example.airlinebooking.model;
+package com.example.airlinebooking.oldcode;
 
 import javax.persistence.*;
 import java.util.Date;

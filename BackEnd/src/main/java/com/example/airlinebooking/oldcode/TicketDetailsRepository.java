@@ -1,6 +1,6 @@
-package com.example.airlinebooking.repository;
+package com.example.airlinebooking.oldcode;
 
-import com.example.airlinebooking.model.TicketDetails;
+import com.example.airlinebooking.oldcode.TicketDetails;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TicketDetailsRepository extends CrudRepository<TicketDetails, Long> {

@@ -1,8 +1,7 @@
 package com.example.airlinebooking;
 
-import com.example.airlinebooking.model.TicketDetails;
-import com.example.airlinebooking.services.TicketService;
-import org.junit.Before;
+import com.example.airlinebooking.oldcode.TicketDetails;
+import com.example.airlinebooking.oldcode.TicketService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
