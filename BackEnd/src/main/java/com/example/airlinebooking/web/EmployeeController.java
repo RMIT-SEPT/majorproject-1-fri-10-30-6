@@ -31,5 +31,21 @@ public class EmployeeController {
     }
 
 
+    @GetMapping("/workerid/{id}")
+    public ResponseEntity<?> findById(@PathVariable long id){
+        AccountEmployee accountEmployee = accountEmployeeService.findById(id);
+
+        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.CREATED);
+    }
+
+
+    @GetMapping("/company/{id}")
+    public ResponseEntity<?> findByCompanyId(@PathVariable long id){
+        AccountEmployee accountEmployee = accountEmployeeService.findByCompany(id);
+
+        return new ResponseEntity<AccountEmployee>(accountEmployee,HttpStatus.CREATED);
+    }
+
+
 
 }

@@ -34,7 +34,7 @@ public class AdminAccountService {
 
 
     public AdminAccount findByUserName(String username){
-        AdminAccount adminAccount = adminAccountRepository.findByUserName(username);
+        AdminAccount adminAccount = adminAccountRepository.findByUsername(username);
 
         return adminAccount;
     }

@@ -34,13 +34,13 @@ public class BookingService {
 
 
     public Bookings findByUserId(long id){
-        Bookings bookings = bookingsRespository.findByUserId(id);
+        Bookings bookings = bookingsRespository.findByUserID(id);
 
         return bookings;
     }
 
     public Bookings findByWorkerId(long id){
-        Bookings bookings = bookingsRespository.findByWorkerId(id);
+        Bookings bookings = bookingsRespository.findByWorkerID(id);
 
         return bookings;
     }

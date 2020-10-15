@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface AdminAccountRepository extends CrudRepository<AdminAccount,Long> {
 
     AdminAccount findById(long id);
-    AdminAccount findByUserName(String username);
+    AdminAccount findByUsername(String Username);
 
     @Override
     Iterable<AdminAccount> findAll();

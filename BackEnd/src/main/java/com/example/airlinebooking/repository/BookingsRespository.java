@@ -6,8 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 public interface BookingsRespository extends CrudRepository<Bookings,Long> {
 
     Bookings findById(long id);
-    Bookings findByUserId(long id);
-    Bookings findByWorkerId(long id);
+    Bookings findByUserID(long id);
+    Bookings findByWorkerID(long id);
 
     @Override
     Iterable<Bookings> findAll();

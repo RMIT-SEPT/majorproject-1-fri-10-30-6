@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Time;
 
 @Entity
 public class AdminAccount {
@@ -14,7 +13,7 @@ public class AdminAccount {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String Username;
+    private String username;
     private String Password;
     private String Firstname;
     private String Lastname;
@@ -22,7 +21,7 @@ public class AdminAccount {
 
 
     public AdminAccount(String username, String password, String firstname, String lastname, String email) {
-        Username = username;
+        this.username = username;
         Password = password;
         Firstname = firstname;
         Lastname = lastname;
@@ -42,11 +41,11 @@ public class AdminAccount {
 
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getPassword() {
