@@ -1,6 +1,6 @@
 package com.example.airlinebooking.services;
 
-import com.example.airlinebooking.exceptions.AccountException;
+import com.example.airlinebooking.exceptions.ExceptionCheck;
 import com.example.airlinebooking.model.AccountEmployee;
 import com.example.airlinebooking.repository.AccountEmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,8 @@ public class AccountEmployeeService {
                 return accountEmployeeRepository.save(accountEmployee1);
             }
 
-        }catch (Exception e){
-            throw new AccountException("Error");
+        }catch (java.lang.Exception e){
+            throw new ExceptionCheck("Error");
         }
     }
 

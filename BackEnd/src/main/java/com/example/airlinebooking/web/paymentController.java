@@ -1,6 +1,6 @@
 package com.example.airlinebooking.web;
 
-import com.example.airlinebooking.exceptions.AccountException;
+import com.example.airlinebooking.exceptions.ExceptionCheck;
 import com.example.airlinebooking.model.Account;
 import com.example.airlinebooking.model.Payment;
 import com.example.airlinebooking.services.AccountService;
@@ -27,7 +27,7 @@ public class paymentController {
         Account account = accountService.findByUsername(payment.getUserName());
 
         if (account == null){
-            throw new AccountException("Error");
+            throw new ExceptionCheck("Error");
         } else {
             Payment payment1 = paymentService.savePayment(payment);
 

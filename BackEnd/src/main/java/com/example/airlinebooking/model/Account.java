@@ -1,22 +1,39 @@
 package com.example.airlinebooking.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
+
 
 @Entity
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotBlank(message = "Please enter a name")
+    @Column(unique = true)
     private String username;
+    @NotBlank(message = "Please enter a password")
     private String password;
+    @NotBlank(message = "Please enter a firstname")
     private String firstname;
+    @NotBlank(message = "Please enter a lastname")
     private String lastname;
+    @NotBlank(message = "Please enter a email")
     private String email;
+    @NotBlank(message = "Please enter a gender")
     private String gender;
+    @NotBlank(message = "Please enter a country")
     private String country;
 
+    @NotBlank(message = "Please enter a address")
     private String address;
+    @NotBlank(message = "Please enter a phone number")
+    @Size(min=10,max =10, message = "Please enter a 10 digit phone number")
     private String phoneNum;
 
     private Date createdAt;

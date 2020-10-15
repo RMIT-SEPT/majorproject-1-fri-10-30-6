@@ -1,5 +1,7 @@
 package com.example.airlinebooking.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +15,10 @@ public class Bookings {
     private long id;
     private long userID;
     private long workerID;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date date;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private Date endDate;
 
 
     public void setId(long id) {

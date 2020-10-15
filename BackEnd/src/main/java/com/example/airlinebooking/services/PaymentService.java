@@ -1,6 +1,6 @@
 package com.example.airlinebooking.services;
 
-import com.example.airlinebooking.exceptions.AccountException;
+import com.example.airlinebooking.exceptions.ExceptionCheck;
 import com.example.airlinebooking.model.Payment;
 import com.example.airlinebooking.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class PaymentService {
     public Payment findByUsername(String username){
         Payment payment = paymentRepository.findByUserName(username);
         if (payment == null) {
-            throw new AccountException("This payment item does not exist!");
+            throw new ExceptionCheck("This payment item does not exist!");
         } else {
             return payment;
         }
@@ -37,7 +37,7 @@ public class PaymentService {
         Payment payment = paymentRepository.findByPlaneId(flightid);
 
         if (payment == null) {
-            throw new AccountException("This payment item does not exist!");
+            throw new ExceptionCheck("This payment item does not exist!");
         } else {
             return payment;
         }
@@ -47,7 +47,7 @@ public class PaymentService {
         Payment payment = paymentRepository.findByTicketId(id);
 
         if (payment == null) {
-            throw new AccountException("This payment item does not exist!");
+            throw new ExceptionCheck("This payment item does not exist!");
         } else {
             return payment;
         }
@@ -57,7 +57,7 @@ public class PaymentService {
         Payment payment = paymentRepository.findByid(id);
 
         if (payment == null) {
-            throw new AccountException("This payment item does not exist!");
+            throw new ExceptionCheck("This payment item does not exist!");
         } else {
             return payment;
         }
@@ -66,7 +66,7 @@ public class PaymentService {
     public void deletePaymentInfo(long id){
         Payment payment = paymentRepository.findByid(id);
         if (payment == null) {
-            throw new AccountException("This payment item does not exist!");
+            throw new ExceptionCheck("This payment item does not exist!");
         } else {
             paymentRepository.delete(payment);
         }
