@@ -34,6 +34,13 @@ public class accountController {
 
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<?> editAccount(@PathVariable long id, @RequestBody Account account){
+        Account account1 = accountService.editAccount(id,account);
+
+        return new ResponseEntity<Account>(account1,HttpStatus.OK);
+    }
+
     @GetMapping("accountbyid/{id}")
     public ResponseEntity<?> getAccountbyID(@PathVariable long id){
         Account account = accountService.findById(id);

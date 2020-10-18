@@ -76,4 +76,15 @@ public class AccountService {
         saveAccount(account);
     }
 
+    public Account editAccount(long id, Account account){
+        Account account1 = accountRepository.findByid(id);
+
+        if (account1 != null){
+            account1 = account;
+            account1.setId(id);
+        }
+
+        return accountRepository.save(account1);
+    }
+
 }
