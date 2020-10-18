@@ -20,8 +20,9 @@ public class TimeSlot {
     private String wed;
     private String thur;
     private String fri;
+    private String avail;
 
-    public TimeSlot(long workersId, String mon,  String tue,  String wed,  String thur,  String fri, String startTime, String endTime) {
+    public TimeSlot(long workersId, String mon,  String tue,  String wed,  String thur,  String fri, String startTime, String endTime, String avail) {
         this.mon = mon;
         this.tue = tue;
         this.wed = wed;
@@ -30,6 +31,7 @@ public class TimeSlot {
         this.WorkersId = workersId;
         this.StartTime = startTime;
         this.EndTime = endTime;
+        this.avail = avail;
     }
 
     public TimeSlot() {
@@ -113,5 +115,13 @@ public class TimeSlot {
 
     public void setEndTime(String endTime) {
         EndTime = endTime;
+    }
+
+    public String getAvail() {
+        return avail;
+    }
+
+    public void setAvail(String avail) {
+        this.avail = avail;
     }
 }

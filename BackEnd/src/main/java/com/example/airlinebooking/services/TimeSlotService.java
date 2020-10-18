@@ -40,6 +40,14 @@ public class TimeSlotService {
         return timeSlotRepository.findAll();
     }
 
+    public void deleteTimeSlot(long id){
+        TimeSlot timeSlot = timeSlotRepository.findById(id);
+
+        if (timeSlot != null){
+            timeSlotRepository.delete(timeSlot);
+        }
+    }
+
 
 
 
