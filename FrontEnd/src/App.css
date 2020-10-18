@@ -53,7 +53,7 @@
 
 .about-border {
     display: block;
-    width: 800px;
+    width: 53%;
     height: 3px;
     background-color:darkslategrey;
     margin: 20px auto;
@@ -61,7 +61,7 @@
 
 .faq-border {
     display: block;
-    width: 1200px;
+    width: 100%;
     height: 3px;
     background-color: darkslategrey;
     margin: 20px auto;

@@ -28,7 +28,11 @@ function navbar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link data-testid="testID1" href="/">Home</Nav.Link>
-                        <Nav.Link href="/Book">Booking a flight</Nav.Link>
+                            <Nav.Link href="/Book">Booking a flight</Nav.Link>
+                            <Nav.Link href="/List">List</Nav.Link>
+                            <Nav.Link href="/Workers">Workers</Nav.Link>
+                            <Nav.Link href="/Services">Services</Nav.Link>
+                            <Nav.Link href="/Timeslots">Timeslots</Nav.Link>
 
 
                     </Nav>
