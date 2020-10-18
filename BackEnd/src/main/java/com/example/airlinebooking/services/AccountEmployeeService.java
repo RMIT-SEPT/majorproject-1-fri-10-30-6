@@ -16,8 +16,9 @@ public class AccountEmployeeService {
 
         try{
 
-            if (accountEmployee1 == null){
-                return accountEmployeeRepository.save(accountEmployee);
+            if (accountEmployee1 != null){
+                accountEmployee1 = accountEmployee;
+                return accountEmployeeRepository.save(accountEmployee1);
             } else {
                 accountEmployee1.setUsername(accountEmployee.getUsername());
                 return accountEmployeeRepository.save(accountEmployee1);
