@@ -15,13 +15,12 @@ public class AccountEmployeeService {
         AccountEmployee accountEmployee1 = accountEmployeeRepository.findById(accountEmployee.getId());
 
         try{
-
             if (accountEmployee1 != null){
                 accountEmployee1 = accountEmployee;
                 return accountEmployeeRepository.save(accountEmployee1);
             } else {
-                accountEmployee1.setUsername(accountEmployee.getUsername());
-                return accountEmployeeRepository.save(accountEmployee1);
+                accountEmployee.setUsername(accountEmployee.getUsername());
+                return accountEmployeeRepository.save(accountEmployee);
             }
 
         }catch (Exception e){
